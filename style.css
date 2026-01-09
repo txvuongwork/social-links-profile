@@ -26,10 +26,10 @@
   --white: hsl(0, 0%, 100%);
   --green: hsl(75, 94%, 57%);
 
-  --font-sm: 14px;
+  --font-sm: 0.875rem;
 }
 
-body {
+main {
   font-family: "Inter", sans-serif;
   color: var(--white);
   background-color: var(--gray-900);
@@ -44,19 +44,19 @@ body {
 .card {
   background-color: var(--gray-800);
   border-radius: 12px;
-  padding: 24px;
+  padding: 1.5rem;
   width: calc(100% - 48px);
   max-width: 384px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
   .card {
-    padding: 40px;
+    padding: 2.5rem;
   }
 }
 
@@ -73,9 +73,9 @@ header {
 }
 
 .name {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-block-end: 4px;
 }
 
 .location,
@@ -118,4 +118,10 @@ nav {
 .social-link:hover {
   background-color: var(--green);
   color: var(--gray-700);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-link {
+    transition: none;
+  }
 }
